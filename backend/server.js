@@ -11,6 +11,8 @@ import leadRoutes from "./routes/leadRoute.js";
 import contactRoutes from "./routes/contactRoute.js";
 import noteRoutes from "./routes/noteRoute.js";
 import taskRoutes from "./routes/taskRoute.js";
+import aiRoutes from "./routes/aiRoute.js";
+import anayticsRoutes from "./routes/analyticsRoute.js";
 
 const app = express();
 
@@ -38,6 +40,8 @@ app.use("/api/leads", leadRoutes);
 app.use("/api/contacts", contactRoutes);
 app.use("/api/notes", noteRoutes);
 app.use("/api/tasks", taskRoutes);
+app.use("/api/ai", aiRoutes);
+app.use("/api/analytics", anayticsRoutes);
 
 /* -------------------------- Error handling (last) --------------------- */
 
