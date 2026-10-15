@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export const LEAD_STATUSES = ["Now", "Qualified", "Proposal", "Won", "Lost"];
+export const LEAD_STATUSES = ["New", "Qualified", "Proposal", "Won", "Lost"];
 export const LEAD_PRIORITIES = ["Low", "Medium", "High"];
 
 const leadSchema = new mongoose.Schema(
@@ -22,7 +22,7 @@ const leadSchema = new mongoose.Schema(
     status: {
       type: String,
       enum: LEAD_STATUSES,
-      default: "Now",
+      default: "New",
       index: true,
     },
     priority: {
